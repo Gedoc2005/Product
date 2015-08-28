@@ -10,7 +10,7 @@ namespace ProductsCatalog
     {
         static void Main(string[] args)
         {
-            ISize s = new BoxSize(1, 1, 1);
+            Size s = new BoxSize(1, 1, 1);
             s.GetAsText();
         }
     }

@@ -5,11 +5,13 @@ using System.Text;
 
 namespace ProductsCatalog
 {
-    public interface ISize
+    public abstract class Size
     {
-        string GetAsText();
-       
+        public virtual string GetAsText()
+        {
+            return "";
+        }
+        public virtual int GetAsInt() { return 1; }
+
     }
-
-
 }
