@@ -10,8 +10,28 @@ namespace ProductsCatalog
     {
         static void Main(string[] args)
         {
-            Size s = new BoxSize(1, 1, 1);
-            s.GetAsText();
+            //Add a product
+
+            do
+            {
+                Console.WriteLine("Time to create an object. Please enter the following information.");
+                Console.Write("ProductName:");
+                string name = Console.ReadLine();
+                Console.Write("ProductID");
+                int ID = Int32.Parse(Console.ReadLine());
+
+                Product product = new Product();
+                product.ProductName = name;
+                product.ProductID = ID;
+                //..
+
+                ProductStorage storage = new ProductStorage();
+                storage.AddNewProduct(product);
+                Console.WriteLine("Product added.");
+                Console.WriteLine("Enter esc to quit");
+     
+            } while (Console.ReadKey().Key != ConsoleKey.Escape);
+            Console.WriteLine("Thank you sir!");
         }
     }
 }

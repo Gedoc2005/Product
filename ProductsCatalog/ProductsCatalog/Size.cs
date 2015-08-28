@@ -13,5 +13,7 @@ namespace ProductsCatalog
         }
         public virtual int GetAsInt() { return 1; }
 
+        public virtual double GetAsDouble() { return 1; }
+
     }
 }
