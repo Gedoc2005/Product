@@ -34,6 +34,8 @@ namespace ProductsCatalog
                 }
             }
         }
+
+        public List<Product>
     }
 
 }

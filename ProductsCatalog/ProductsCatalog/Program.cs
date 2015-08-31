@@ -10,6 +10,7 @@ namespace ProductsCatalog
     {
         static void Main(string[] args)
         {
+            ProductStorage storage = new ProductStorage();
             //Add a product
 
             do
@@ -18,19 +19,24 @@ namespace ProductsCatalog
                 Console.Write("ProductName:");
                 string name = Console.ReadLine();
                 Console.Write("ProductID");
-                int ID = Int32.Parse(Console.ReadLine());
+                int id = Int32.Parse(Console.ReadLine());
 
                 Product product = new Product();
                 product.ProductName = name;
-                product.ProductID = ID;
+                product.ProductID = id;
                 //..
 
-                ProductStorage storage = new ProductStorage();
+
                 storage.AddNewProduct(product);
                 Console.WriteLine("Product added.");
                 Console.WriteLine("Enter esc to quit");
      
             } while (Console.ReadKey().Key != ConsoleKey.Escape);
+
+            Console.Write("Enter ProductID to remove:");
+            int ID = Int32.Parse(Console.ReadLine());
+            storage.RemoveProductID(ID);
+
             Console.WriteLine("Thank you sir!");
         }
     }
