@@ -6,11 +6,28 @@
 
 <h2>Index</h2>
 
-<p>
+
     @Html.ActionLink("Create New", "Create")
-</p>
+    @using (Html.BeginForm())
+    {
+    <p>
+        Name: @Html.TextBox("SearchString")
+        <input type="submit" value="Filter" />
+    </p>
+    }
+@using (Html.BeginForm())
+{
+    <p>
+        Name: @Html.TextBox("category")
+        <input type="submit" value="Select Category" />
+    </p>
+}
+
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
@@ -21,13 +38,16 @@
             @Html.DisplayNameFor(model => model.ArticleNumber)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ImegeURL)
+            @Html.DisplayNameFor(model => model.ImageURL)
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.CategoryName)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
         </td>
@@ -38,7 +58,7 @@
             @Html.DisplayFor(modelItem => item.ArticleNumber)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ImegeURL)
+            <a href="@item.ImageURL"> <img class="img-rounded img-small" src="@item.ImageURL" style="width:100px;height:60px;" /></a>
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

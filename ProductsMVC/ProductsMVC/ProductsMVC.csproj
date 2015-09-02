@@ -159,6 +159,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
@@ -169,13 +170,13 @@
     <Compile Include="Migrations\201508310816227_InitialCreate.Designer.cs">
       <DependentUpon>201508310816227_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201508310841049_ArticleNumber.cs" />
-    <Compile Include="Migrations\201508310841049_ArticleNumber.Designer.cs">
-      <DependentUpon>201508310841049_ArticleNumber.cs</DependentUpon>
+    <Compile Include="Migrations\201509021112399_TEst.cs" />
+    <Compile Include="Migrations\201509021112399_TEst.Designer.cs">
+      <DependentUpon>201509021112399_TEst.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201508310906035_ImegeURL.cs" />
-    <Compile Include="Migrations\201508310906035_ImegeURL.Designer.cs">
-      <DependentUpon>201508310906035_ImegeURL.cs</DependentUpon>
+    <Compile Include="Migrations\201509021113317_test2.cs" />
+    <Compile Include="Migrations\201509021113317_test2.Designer.cs">
+      <DependentUpon>201509021113317_test2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -247,6 +248,11 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Categories\Create.cshtml" />
+    <Content Include="Views\Categories\Delete.cshtml" />
+    <Content Include="Views\Categories\Details.cshtml" />
+    <Content Include="Views\Categories\Edit.cshtml" />
+    <Content Include="Views\Categories\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -262,11 +268,11 @@
     <EmbeddedResource Include="Migrations\201508310816227_InitialCreate.resx">
       <DependentUpon>201508310816227_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201508310841049_ArticleNumber.resx">
-      <DependentUpon>201508310841049_ArticleNumber.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201509021112399_TEst.resx">
+      <DependentUpon>201509021112399_TEst.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201508310906035_ImegeURL.resx">
-      <DependentUpon>201508310906035_ImegeURL.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201509021113317_test2.resx">
+      <DependentUpon>201509021113317_test2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

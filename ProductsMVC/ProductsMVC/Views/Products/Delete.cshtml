@@ -12,6 +12,14 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
 
@@ -36,11 +44,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ImegeURL)
+            @Html.DisplayNameFor(model => model.ImageURL)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ImegeURL)
+            @Html.DisplayFor(model => model.ImageURL)
         </dd>
 
     </dl>
